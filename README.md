@@ -201,7 +201,7 @@ Here, when the algorithm has chosen the crates for each layer (the pruning relat
 ## Citation
 Please cite our work as:
 
-`
+```
 @inproceedings{li2018olmp,		
   title = {Optimization based Layer-wise Magnitude-based Pruning for DNN Compression},
   author = {Guiying Li and Chao Qian and Chunhui Jiang and Xiaofen Lu and Ke Tang},
@@ -210,62 +210,44 @@ Please cite our work as:
   pages={2383--2389},
   year = {2018}
 }
-`
+```
 and the other citations may also be needed:
 
 Caffe
 
-`
+```
 @article{jia2014caffe,
-
 	Author = {Yangqing Jia and  Evan Shelhamer and  Jeff Donahue and  Sergey Karayev and  Jonathan Long and Ross Girshick and Sergio Guadarrama and Trevor Darrell},
-
 	Journal = {arXiv:1408.5093},
-
 	Title = {Caffe: Convolutional Architecture for Fast Feature Embedding},
-
 	Year = {2014}
-
 }
-`
+```
 
 Dynamic surgery:
 
-`
+```
 @inproceedings{guo2016dynamic,		
-
   title = {Dynamic Network Surgery for Efficient DNNs},
-
   author = {Yiwen Guo and Anbang Yao and Yurong Chen},
-
   booktitle = {Advances in neural information processing systems (NIPS)},
-
   address={Barcelona, Spain},
-
   pages={1379--1387},
-
   year = {2016}
 
 }
-`
+```
 
 Negatively Correlated Search:
-`
+```
 @article{tang2016negatively,
-
 	author={Ke Tang and Peng Yang and Xin Yao},
-
 	title={Negatively correlated search},
-
 	journal={IEEE Journal on Selected Areas in Communications},
-
 	volume={34},
-
 	number={3},
-
 	pages={542--550},
-
 	year={2016}
 
 }
-`
+```
