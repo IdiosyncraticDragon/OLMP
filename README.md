@@ -32,7 +32,7 @@ We upload it to Baidu Wangpan (Usage: past the link to the internet explorer and
 
 For MNIST:
 
-link: https://pan.baidu.com/s/17lem8wVV9nd\_dZxVd8FsHA
+link: https://pan.baidu.com/s/17lem8wVV9nd_dZxVd8FsHA
 
 password: 40fa
 
@@ -90,7 +90,7 @@ For AlexNet-Caltech, it may not. Since we do not fixed the random seed for droup
 
 Compressed model of AlexNet-Caltech:
 
-link: https://pan.baidu.com/s/1qdsAEsBYFe6zTnmX\_yO8ZA
+link: https://pan.baidu.com/s/1qdsAEsBYFe6zTnmX_yO8ZA
 
 password: 3ygh
 
