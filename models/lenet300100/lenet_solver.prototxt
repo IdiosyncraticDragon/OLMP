@@ -1,0 +1,37 @@
+# The train/test net protocol buffer definition
+net: "models/lenet300100/lenet_train_test.prototxt"
+# test_iter specifies how many forward passes the test should carry out.
+# In the case of MNIST, we have test batch size 100 and 100 test iterations,
+# covering the full 10,000 testing images.
+#------added by Guiying----
+#test_state: {stage:"original test"}
+#test_state: {stage:"tune crates"}
+#test_iter: 600
+#-----Guiying--------------
+test_iter: 100
+# Carry out testing every 500 training iterations.
+test_interval: 500
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.01
+regularization_type:"L2" #added by Guiying Li
+momentum: 0.9
+weight_decay: 0.0005
+# The learning rate policy
+lr_policy: "inv"
+gamma: 0.0001
+power: 0.75
+# Display every 100 iterations
+display: 100
+# The maximum number of iterations
+max_iter: 20500
+# snapshot intermediate results
+#snapshot: 1000
+#snapshot: 12000
+#snapshot: 16500
+#snapshot: 17500
+#snapshot: 19500
+#snapshot: 20500
+#snapshot: 30000
+snapshot_prefix: "models/lenet300100/lenet300100"
+# solver mode: CPU or GPU
+solver_mode: GPU

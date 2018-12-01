@@ -1,0 +1,16 @@
+# The train/test net protocol buffer definition
+net: "models/caltech_caffenet/train_val_caltech.prototxt"
+test_iter: 303
+test_interval: 500
+base_lr: 0.001
+regularization_type:"L2"
+lr_policy: "step"
+gamma: 0.1
+stepsize: 7000 #original is 3000
+display: 100 #original is 20
+max_iter: 10800
+momentum: 0.9
+weight_decay: 0.0005
+#snapshot: 5000
+snapshot_prefix: "models/caltech_caffenet/caltech_caffenet_train"
+solver_mode: GPU
