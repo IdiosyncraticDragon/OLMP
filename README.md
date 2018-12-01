@@ -234,7 +234,6 @@ Dynamic surgery:
   address={Barcelona, Spain},
   pages={1379--1387},
   year = {2016}
-
 }
 ```
 
@@ -248,6 +247,5 @@ Negatively Correlated Search:
 	number={3},
 	pages={542--550},
 	year={2016}
-
 }
 ```
