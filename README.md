@@ -1,6 +1,6 @@
 # Optimization based Layer-wise Magnitude-based Pruning for DNN Compression 
-Thank you for everyone who are intereted in our work.  
-This repository is the implementation of OLMP. In experiments of LeNet-5 and LeNet-300-100, we have fixed the random seeds in python scripts for the purpose of reproducting the results shown in our paper. For AlexNet-Caltech, unfortunately, it has the dropout layers with the random seed inside Caffe framework which is the random seed we did not recorded during our experiments. Instead, We provide the compressed model of AlexNet-Caltech whoes results are reported in our paper. Users can also run the script of AlexNet-Caltech several times to reproduce a similar result compared to the one in our paper.
+Thank you for everyone who is intereted in our work.  
+This repository is the implementation of OLMP. In experiments of LeNet-5 and LeNet-300-100, we have fixed the random seeds in python scripts for the purpose of reproducting the results shown in our paper. For AlexNet-Caltech, unfortunately, it has the dropout layers with the random seed inside Caffe framework which is the random seed we did not recorded during our experiments. Instead, We provide the compressed model of AlexNet-Caltech whoes result is reported in our paper. Users can also run the script of AlexNet-Caltech several times to reproduce a similar result compared to the one in our paper.
 
 This project is based on [Caffe](https://github.com/BVLC/caffe) and [Dynamic surgery](https://github.com/yiwenguo/Dynamic-Network-Surgery). Thanks to the authors of these two projects.
 
@@ -15,7 +15,7 @@ This project is based on [Caffe](https://github.com/BVLC/caffe) and [Dynamic sur
 
 ## Requiremetns
 - The requirements is the same as Caffe.
-- easydict package of python
+- easydict package for python
 
 ## Installation
 - Install all the requirements of Caffe. You can all download a docker image of Caffe directly.
@@ -29,7 +29,7 @@ This project is based on [Caffe](https://github.com/BVLC/caffe) and [Dynamic sur
 Most of the problems in making are caused by the settings of enviroment. Please refer to https://github.com/BVLC/caffe/issues for help.
 
 ## Data
-We upload it to Baidu Wangpan (Usage: past the link to the internet explorer and use the password to download the file).
+We upload all the processed data (the data file can be directed used in this project, users can also process data by themself following the details described in our paper) to Baidu Wangpan (Usage: past the link to the internet explorer and use the password to download the file).
 
 For MNIST:
 
@@ -44,25 +44,27 @@ link: https://pan.baidu.com/s/1eezA0uCKHy0OLCz34XBHUQ
 password: v5s8
 
 ## Tutorial
-To all the experiments below, the user should eitd the address of the data in .prototxt.
+To all the experiments below, the user should edit the address of the data in .prototxt.
 
-* To compress the model LeNet-300-100, it firstly needs to make sure the data address in ./models/lenet300100/lenet\_train\_test.prototxt is the one in correct.
-
+### LeNet-300-100
+To compress the model LeNet-300-100, it firstly needs to make sure the data address in ./models/lenet300100/lenet\_train\_test.prototxt is the one in correct.
 Please Run:
 ```
 python exp_lenet300100.py
 ```
 
-* To compress the model LeNet-5, please Run:
+### LeNet-5
+To compress the model LeNet-5, please Run:
 ```
 python exp_lenet5.py
 ```
 
-* To compress the model AlexNet-Caltech, please Run:
+### AlexNet-Caltech
+To compress the model AlexNet-Caltech, please Run:
 ```
 python exp_caltech.py
 ```
-Note that the reference model is too large for uploading to github, so that we upload it to Baidu Wangpan:
+Note that the reference model for exp\_caltech.py is too large for uploading to github, so that we upload it to Baidu Wangpan:
 
 Reference model of AlexNet-Caltech:
 
@@ -74,7 +76,7 @@ password: 8r48
 
 ### Check the compressed model
 
-For Lenet-300-100 and Lenet-5, the user can find the compression results are the same as that reported in our paper. Or, the user can run sparsity\_lenet5.py and sparsity\_lenet300100.py to check the sparsity of the model compressed by us.
+For Lenet-300-100 and Lenet-5, the user can find the compressional results are the same as that reported in our paper. Or, the user can run sparsity\_lenet5.py and sparsity\_lenet300100.py to check the sparsity of the model compressed by us.
 
 For Lenet-300-100, the model compressed by use is provided at:
 ```
@@ -87,7 +89,7 @@ For Lenet-5, the model compressed by us is provided at:
 ./models/lenet5/compressed_lenet5.caffemodel
 ```
 
-For AlexNet-Caltech, it may not. Since we do not fixed the random seed for droupout operation, it can not guarantee the result are the same as that in our paper. Consider about this, we provide the model compressed by us.
+For AlexNet-Caltech, since we do not fixed the random seed for droupout operation, it can not guarantee the result is the same as that in our paper. Consider about this, we provide the model compressed by us.
 
 Compressed model of AlexNet-Caltech:
 
@@ -151,7 +153,7 @@ This indicates the accuracy of the pruned model on the whole testing set. Here t
 - Secondly, the user shold write a python file to compress the models. Take exp\_lenet300100.py, exp\_lenent5.py and exp\_caltech.py as examples. All the values of hyper parameters of pruning are specified in the python scripts.
 
 ## Explanation for code
-For the python scirpts, we have already wrote detailed comments inside the scripts.
+For the python scirpts, we have already written detailed comments inside the scripts.
 
 For the editing of the C++ code. We have edited ./src/caffe/layers/compress\_inner\_product\_layer.cu and ./src/caffe/layers/compress\_conv\_layer.cu. In the forwarding passing:
 ```
