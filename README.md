@@ -4,6 +4,8 @@ This repository is the implementation of OLMP. In experiments of LeNet-5 and LeN
 
 This project is based on [Caffe](https://github.com/BVLC/caffe) and [Dynamic surgery](https://github.com/yiwenguo/Dynamic-Network-Surgery). Thanks to the authors of these two projects.
 
+Note that for who want run the code, there is no need to pre-install Caffe! This project is an edited version of Caffe, and an specifical Caffe will be genered by building the code in the project directly.
+
 ## Testing enviroment
 - Docker image: [kaixhin/cuda-caffe:8.0](https://hub.docker.com/r/kaixhin/cuda-caffe/)
 	- Ubuntu 16.04.2 LTS
@@ -14,7 +16,7 @@ This project is based on [Caffe](https://github.com/BVLC/caffe) and [Dynamic sur
 - 64 GB Memory
 
 ## Requiremetns
-- The requirements is the same as Caffe.
+- The requirements are the same as Caffe.
 - easydict package for python
 
 ## Installation
