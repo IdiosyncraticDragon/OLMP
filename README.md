@@ -1,4 +1,6 @@
 # Optimization based Layer-wise Magnitude-based Pruning for DNN Compression 
+> Guiying Li, Chao Qian, Chunhui Jiang, Xiaofen Lu, and Ke Tang. Optimization based Layer-wise Magnitude-based Pruning for DNN Compression. In Proceedings of the 27th International Joint Conference on Artificial Intelligence (IJCAI 2018), pages 2383-2389, Stockholm, Sweden, 2018. [pdf link](https://www.ijcai.org/proceedings/2018/0330.pdf)
+
 Thank you for everyone who is intereted in our work.  
 This repository is the implementation of OLMP. In experiments of LeNet-5 and LeNet-300-100, we have fixed the random seeds in python scripts for the purpose of reproducting the results shown in our paper. For AlexNet-Caltech, unfortunately, it has the dropout layers with the random seed inside Caffe framework which is the random seed we did not recorded during our experiments. Instead, We provide the compressed model of AlexNet-Caltech whoes result is reported in our paper. Users can also run the script of AlexNet-Caltech several times to reproduce a similar result compared to the one in our paper.
 
